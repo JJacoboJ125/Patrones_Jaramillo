@@ -14,7 +14,7 @@ public class DesignPatterns {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("no entiendo un culoooooo");
+        System.out.println("");
     }
     
 }
