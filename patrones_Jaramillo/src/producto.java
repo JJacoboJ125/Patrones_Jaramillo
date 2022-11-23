@@ -10,13 +10,13 @@
 public class producto implements IProducto {
 
     private String nombre;
-    private String categoria;
+    private Abs_Categorias categoria;
     private int codigo;
     private String descripcion;
     private double Costo;
     private int cantidad;
 
-    public producto(String nombre, String categoria, int codigo, String descripcion, double Costo) {
+    public producto(String nombre, Abs_Categorias categoria, int codigo, String descripcion, double Costo) {
         this.nombre = nombre;
         this.categoria = categoria;
         this.codigo = codigo;
@@ -48,11 +48,11 @@ public class producto implements IProducto {
         this.nombre = nombre;
     }
 
-    public String getCategoria() {
+    public Abs_Categorias getCategoria() {
         return categoria;
     }
 
-    public void setCategoria(String categoria) {
+    public void setCategoria(Abs_Categorias categoria) {
         this.categoria = categoria;
     }
 
@@ -80,5 +80,13 @@ public class producto implements IProducto {
         this.Costo = Costo;
     }
 
+    @Override
+    public String toString() {
+        return "nombre  " + nombre + "\ncategoria  " + categoria +
+               "\ncodigo  " + codigo + "\ndescripcion  " + descripcion + 
+               "\nCosto  " + Costo + "\ncantidad  " + cantidad;
+    }
+
+    
         
 }

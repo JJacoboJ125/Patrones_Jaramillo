@@ -12,5 +12,12 @@ public class tecnologia extends Abs_Categorias {
      @Override
     public String TipoCategoria() {
         return "tecnologia";
+        
     }
+
+    @Override
+    public String toString() {
+        return "tecnologia";
+    }
+    
 }

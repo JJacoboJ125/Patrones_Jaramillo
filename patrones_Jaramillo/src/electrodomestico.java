@@ -13,5 +13,11 @@ public class electrodomestico extends Abs_Categorias {
     public String TipoCategoria() {
         return "electrodomestico";
     }
+
+    @Override
+    public String toString() {
+        return "electrodomestico";
+    }
+    
     
 }

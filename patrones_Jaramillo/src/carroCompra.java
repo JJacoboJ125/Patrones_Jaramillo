@@ -14,14 +14,11 @@ public class carroCompra<Key extends Comparable<Key>, Value>{
     private Value[] vals;
     private int N;
 
-    public carroCompra(int capacity) { // See Algorithm 1.1 for standard array-resizing code.
+    public carroCompra(int capacity) {
         keys = (Key[]) new Comparable[capacity];
         vals = (Value[]) new Object[capacity];
     }
 
-    carroCompra() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     public Value get(Key key) {
         if (isEmpty()) {
@@ -146,7 +143,21 @@ public class carroCompra<Key extends Comparable<Key>, Value>{
     }
        
  
- public iteradorCarro crearIterador(){
-     return new iteradorCarro(prodAgregados);
- }
+ public Iterable<Key> keys(Key lo, Key hi)
+{
+ resizegArrayQueue<Key> q = new resizegArrayQueue<Key>();
+ for (int i = rank(lo, 0, N-1); i < rank(hi, 0, N-1); i++)
+ q.enqueue(keys[i]);
+ if (contains(hi))
+ q.enqueue(keys[rank(hi, 0, N-1)]);
+   
+ return q;
+}
+
+        
+    public Iterable<Key> keys(){
+        
+        return keys(min(), max());
+    }
+    
 }

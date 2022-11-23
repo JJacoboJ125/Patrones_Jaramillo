@@ -13,6 +13,13 @@ public class vestuario extends Abs_Categorias {
     public String TipoCategoria() {
         return "prendas de vestir";
     }
+
+    @Override
+    public String toString() {
+        return "vestuario";
+    }
+    
+    
     
     
 }
